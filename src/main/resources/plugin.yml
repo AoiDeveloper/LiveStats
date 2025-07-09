@@ -1,0 +1,4 @@
+name: LiveStats
+version: '1.0-SNAPSHOT'
+main: net.tsubu.liveStats.LiveStats
+api-version: '1.21'
