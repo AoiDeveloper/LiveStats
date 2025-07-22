@@ -1,4 +1,5 @@
 plugins {
+    id("maven-publish")
     kotlin("jvm") version "2.2.0"
     id("com.gradleup.shadow") version "8.3.0"
     id("xyz.jpenilla.run-paper") version "2.3.1"
@@ -60,5 +61,14 @@ spotless {
     kotlin {
         ktlint("1.6.0")
         toggleOffOn()
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            artifactId = "YOUR_REPOSITORY_NAME" // あなたのGitHubリポジトリ名
+            from(components["java"])
+        }
     }
 }
