@@ -1,8 +1,6 @@
 package net.tsubu.liveStats
 
 import kotlinx.coroutines.asCoroutineDispatcher
-import net.tsubu.liveStats.debug.LoginListener
-import net.tsubu.liveStats.debug.debug
 import net.tsubu.liveStats.di.appModule
 import net.tsubu.liveStats.listener.PlayerConnectionListener
 import org.bukkit.plugin.java.JavaPlugin
@@ -31,9 +29,6 @@ class LiveStats : JavaPlugin() {
         }
 
         server.pluginManager.registerEvents(playerConnectionListener, this)
-
-        server.pluginManager.registerEvents(LoginListener(), this)
-        debug()
     }
 
     override fun onDisable() {

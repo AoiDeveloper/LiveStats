@@ -14,7 +14,7 @@ object StatsProperties {
             Instant.DISTANT_PAST,
         ).register()
 
-    private val allKeys = mutableListOf<PropertyKey<*>>()
+    private val allKeys: MutableList<PropertyKey<*>> by lazy { mutableListOf<PropertyKey<*>>() }
 
     fun register(key: PropertyKey<*>) {
         allKeys.add(key)

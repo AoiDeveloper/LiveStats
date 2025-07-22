@@ -10,7 +10,7 @@ import org.koin.core.component.inject
 
 object StatsAPI : KoinComponent {
     val playerDataManager: PlayerDataManager by inject()
-    private val achievementManager: AchievementManager by inject()
+    val achievementManager: AchievementManager by inject()
 
     /**
      * Retrieves the dedicated coroutine scope associated with a specific player.

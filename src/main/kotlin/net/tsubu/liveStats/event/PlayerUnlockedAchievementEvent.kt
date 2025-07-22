@@ -10,9 +10,6 @@ class PlayerUnlockedAchievementEvent(
     companion object {
         @JvmStatic
         val handlerList = HandlerList()
-
-        @JvmStatic
-        fun getHandlerList(): HandlerList = handlerList
     }
 
     override fun getHandlers(): HandlerList = handlerList
